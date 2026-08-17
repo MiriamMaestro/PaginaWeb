@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terapia perinatal en Madrid y online | Psicología con M</title>
+  <meta name="description" content="Terapia perinatal durante el embarazo, el postparto y la maternidad. Acompañamiento online y presencial en Argüelles, Madrid.">
+  <style>
+    :root{
+      --bg:#fffdfb;
+      --paper:#fffdfb;
+      --sage:#c99288;
+      --sage-dark:#c99288;
+      --sage-soft:#f4e8e5;
+      --sand:#fcf6f4;
+      --rose:#e9d7d1;
+      --text:#7a716a;
+      --heading:#7f6a5a;
+      --muted:#8a7f77;
+      --line:#eadfda;
+      --white:#fffdfb;
+      --radius:24px;
+      --shadow:0 20px 60px rgba(58,51,43,.08);
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.7;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    :focus-visible{outline:3px solid rgba(67,86,74,.42);outline-offset:4px}
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--sage-dark);
+      font-size:.78rem;
+      font-weight:750;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:26px;height:1px;background:var(--sage);
+    }
+
+    h1,h2,h3{
+      margin:0;
+      color:var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight:500;
+      letter-spacing:-.025em;
+      line-height:1.12;
+    }
+    h1{font-size:clamp(2.7rem,6vw,5rem)}
+    h2{font-size:clamp(2rem,4vw,3.35rem)}
+    h3{font-size:1.45rem}
+    p{margin:0}
+    .lead{font-size:clamp(1.08rem,1.5vw,1.25rem);color:var(--text)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 24px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.96rem;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+    .btn-primary{background:var(--sage-dark);color:white}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(67,86,74,.18)}
+    .btn-secondary{border-color:var(--sage-dark);color:var(--sage-dark);background:transparent}
+    .btn-secondary:hover{background:var(--sage-soft)}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,253,251,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(228,221,212,.8);
+    }
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      display:block;
+      width:205px;
+    }
+    .brand img{width:100%;height:auto}
+    .navlinks{display:flex;align-items:center;gap:28px;font-size:.94rem}
+    .navlinks a{color:var(--text)}
+    .navlinks a:hover{color:var(--sage-dark)}
+    .nav-cta{padding:11px 17px;background:var(--sage-dark);color:white!important;border-radius:999px}
+    .menu-btn{display:none;border:0;background:none;font-size:1.5rem;color:var(--sage-dark)}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:96px 0 88px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:520px;height:520px;border-radius:50%;
+      background:var(--sage-soft);
+      right:-180px;top:-180px;
+      opacity:.72;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:70px;
+      align-items:center;
+    }
+    .hero-copy{max-width:720px}
+    .hero h1{margin:18px 0 26px}
+    .hero h1 span{color:#a66f65}
+    .perinatal-page .hero h1{font-size:clamp(2.7rem,5vw,4.4rem)}
+    .hero-copy .lead{max-width:650px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+    .micro{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:20px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .micro-dot{width:7px;height:7px;border-radius:50%;background:var(--sage)}
+
+    .hero-card{
+      position:relative;
+      min-height:460px;
+      background:var(--sage-soft);
+      border-radius:38px 38px 120px 38px;
+      box-shadow:var(--shadow);
+      padding:44px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      overflow:hidden;
+    }
+    .hero-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .hero-card::marker{display:none}
+    .hero-card .photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(38,48,42,.58))}
+    .hero-card::before,.hero-card::after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(67,86,74,.22);
+      border-radius:50%;
+    }
+    .hero-card::before{width:250px;height:250px;right:-60px;top:-60px}
+    .hero-card::after{width:160px;height:160px;right:22px;top:30px}
+    .hero-quote{
+      position:relative;
+      background:rgba(255,255,255,.72);
+      backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:22px;
+      padding:26px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.3rem;
+      line-height:1.45;
+      color:var(--heading);
+    }
+
+    section{padding:92px 0}
+    .section-head{max-width:760px;margin-bottom:48px}
+    .section-head h2{margin:14px 0 18px}
+    .section-head p{color:var(--muted);font-size:1.05rem}
+
+    .recognition-section{position:relative;overflow:hidden;padding-top:78px;background:#fcf6f4;border-top:1px solid var(--line)}
+    .recognition-section:after{content:"";position:absolute;z-index:0;right:-120px;top:-180px;width:370px;height:370px;border-radius:50%;background:rgba(233,215,209,.38)}
+    .recognition-section .container{position:relative;z-index:1}
+    .recognition-section .section-head{max-width:780px}
+
+    .ident-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .ident-card{
+      background:rgba(255,253,251,.92);
+      border:1px solid rgba(201,146,136,.24);
+      border-radius:20px;
+      padding:25px 25px 25px 58px;
+      position:relative;
+      font-size:1rem;
+      box-shadow:0 10px 28px rgba(92,70,58,.045);
+    }
+    .ident-card::before{
+      content:"✓";
+      position:absolute;
+      left:24px;top:24px;
+      width:22px;height:22px;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--sage-soft);
+      color:var(--sage-dark);
+      font-weight:800;
+      font-size:.78rem;
+    }
+    .reassure{
+      margin-top:34px;
+      background:var(--sage-dark);
+      color:white;
+      border-radius:24px;
+      padding:32px 36px;
+      font-size:1.08rem;
+    }
+    .reassure strong{font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;font-weight:500}
+
+    .cycle-section{position:relative;overflow:hidden;background:var(--sand)}
+    .cycle-section:after{content:"";position:absolute;right:-120px;bottom:-170px;width:390px;height:390px;border:1px solid var(--sage);border-radius:48% 52% 38% 62%;opacity:.18}
+    .cycle-intro{max-width:760px;margin:0 auto 52px;text-align:center}
+    .cycle-intro h2{margin:14px 0 20px}
+    .cycle-intro p{font-size:1.06rem;color:var(--text)}
+    .expectation-reality{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:76px;max-width:1050px;margin:auto;padding:20px 0}
+    .expectation-reality:before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1px dashed var(--sage);opacity:.65}
+    .experience{position:relative;padding:42px 46px;border-radius:120px 120px 28px 28px}
+    .experience.expectation{background:rgba(255,255,255,.68);border:1px solid var(--line)}
+    .experience.reality{background:var(--sage-soft)}
+    .experience-label{display:block;margin-bottom:14px;color:var(--sage-dark);font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .experience h3{font-size:clamp(1.8rem,3vw,2.45rem);margin-bottom:24px}
+    .experience ul{display:grid;gap:13px;margin:0;padding:0;list-style:none}
+    .experience li{position:relative;padding-left:24px;color:var(--muted)}
+    .experience li:before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;border:1px solid var(--sage);border-radius:50%}
+    .reality li:before{background:var(--sage);border-color:var(--sage)}
+
+    .work-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:42px;
+    }
+    .work-item{
+      display:flex;
+      gap:17px;
+      padding:24px;
+      border-bottom:1px solid var(--line);
+    }
+    .work-icon{
+      flex:none;
+      width:38px;height:38px;
+      border-radius:12px;
+      background:var(--sage-soft);
+      display:grid;place-items:center;
+      color:var(--sage-dark);
+      font-weight:800;
+    }
+    .work-item p{color:var(--text)}
+
+    .new-pair{
+      margin-top:55px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-radius:30px;
+      overflow:hidden;
+      background:var(--sage-dark);
+      color:white;
+    }
+    .new-pair-copy{padding:50px}
+    .new-pair h2{font-size:clamp(2rem,3.5vw,3rem);margin-bottom:18px}
+    .new-pair p{color:rgba(255,255,255,.82);font-size:1.04rem}
+    .new-pair-art{
+      min-height:340px;
+      background:linear-gradient(135deg,var(--rose),var(--sage-soft));
+      position:relative;
+    }
+    .new-pair-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .new-pair-art .art-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(67,86,74,.22),transparent)}
+    .new-pair-art::before,
+    .new-pair-art::after{
+      content:"";
+      position:absolute;
+      width:170px;height:260px;
+      border-radius:110px 110px 30px 30px;
+      background:rgba(255,255,255,.34);
+      bottom:-40px;
+    }
+    .new-pair-art::before{left:22%;transform:rotate(-8deg)}
+    .new-pair-art::after{right:20%;transform:rotate(8deg)}
+
+    .early{
+      position:relative;
+      overflow:hidden;
+      background:#b9857b;
+    }
+    .early:before{content:"";position:absolute;left:-150px;bottom:-240px;width:440px;height:440px;border:1px solid rgba(255,255,255,.2);border-radius:48% 52% 60% 40%}
+    .early-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+    .early .eyebrow{color:#fff4f1}
+    .early .eyebrow:before{background:#fff4f1}
+    .early h2{margin:14px 0 22px;color:white}
+    .early p{font-size:1.07rem;color:rgba(255,255,255,.84)}
+    .early p+p{margin-top:18px}
+    .early-panel{
+      padding:38px;
+      border-radius:28px;
+      background:var(--paper);
+      box-shadow:0 20px 55px rgba(58,51,43,.16);
+    }
+    .early-panel h3{font-size:1.9rem;color:var(--heading);margin-bottom:14px}
+    .early-panel p{color:var(--text)}
+
+    .faq-section{background:var(--sand);border-top:1px solid var(--line)}
+    .faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:start}
+    .faq-heading{position:sticky;top:115px}
+    .faq-heading h2{margin:14px 0 18px}
+    .faq-heading p{color:var(--muted)}
+    .faq-list{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--paper)}
+    .faq-list details{border-bottom:1px solid var(--line)}
+    .faq-list details:last-child{border-bottom:0}
+    .faq-list summary{position:relative;padding:21px 54px 21px 24px;cursor:pointer;list-style:none;font-weight:650;color:var(--heading)}
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary::after{content:"+";position:absolute;right:24px;color:var(--sage-dark);font-size:1.25rem}
+    .faq-list details[open] summary::after{content:"−"}
+    .faq-list details p{padding:0 54px 22px 24px;color:var(--muted)}
+
+    .call-section{padding:100px 0}
+    .call-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:34px;
+      background:var(--sage-dark);
+      color:white;
+      padding:64px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:48px;
+      align-items:center;
+    }
+    .call-card::after{
+      content:"";
+      position:absolute;
+      width:340px;height:340px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.15);
+      right:-130px;top:-100px;
+    }
+    .call-card h2{margin:14px 0 22px}
+    .call-card p{color:rgba(255,255,255,.82);max-width:720px}
+    .call-card p+p{margin-top:16px}
+    .call-side{
+      position:relative;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:24px;
+      padding:28px;
+    }
+    .call-detail{
+      display:flex;
+      gap:12px;
+      padding:12px 0;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .call-detail:last-of-type{border-bottom:0;margin-bottom:18px}
+    .call-detail strong{display:block}
+    .call-detail span{font-size:.9rem;color:rgba(255,255,255,.72)}
+    .call-side .btn{width:100%;background:white;color:var(--sage-dark)}
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:38px 0;
+      color:var(--muted);
+      font-size:.88rem;
+    }
+    .footer-grid{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+
+    @media(max-width:900px){
+      .navlinks{display:none}
+      .navlinks.open{
+        display:flex;
+        position:absolute;
+        left:20px;right:20px;top:68px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:14px;
+        border:1px solid var(--line);
+        border-radius:18px;
+        background:var(--paper);
+        box-shadow:var(--shadow);
+      }
+      .navlinks.open a{padding:12px}
+      .menu-btn{display:block}
+      .hero-grid,.early-grid,.call-card,.new-pair,.faq-grid,.expectation-reality{grid-template-columns:1fr}
+      .hero{padding-top:66px}
+      .hero-card{min-height:320px}
+      .expectation-reality{gap:22px}.expectation-reality:before{display:none}.experience{padding:36px 32px;border-radius:70px 70px 24px 24px}
+      .faq-heading{position:static}
+      .cycle{grid-template-columns:1fr}
+      .arrow{transform:rotate(90deg)}
+      .work-grid{grid-template-columns:1fr}
+      .new-pair-art{min-height:250px}
+      .call-card{padding:42px 30px}
+    }
+    @media(max-width:640px){
+      .container{width:min(var(--max),calc(100% - 28px))}
+      section{padding:70px 0}
+      .ident-grid{grid-template-columns:1fr}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .hero-card{padding:28px;border-radius:28px 28px 80px 28px}
+      .hero-quote{font-size:1.12rem}
+      .new-pair-copy{padding:38px 28px}
+      .call-section{padding:70px 0}
+      .footer-grid{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body class="perinatal-page">
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="PsicologíaConM, inicio"><img src="https://psicologiaconm.rildev04.eu/wp-content/uploads/Logo-Floreria-Minimalista-Blanco-Negro.png" alt="PsicologíaConM"></a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <nav class="navlinks" id="main-menu" aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/terapia-de-pareja/">Terapia de pareja</a>
+      <a href="/terapia-perinatal/" aria-current="page"><strong>Terapia perinatal</strong></a>
+      <a class="nav-cta" href="/contacto/">Primera llamada</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Terapia perinatal</span>
+        <h1>El embarazo, el postparto y la maternidad <span>no siempre se sienten como esperabas.</span></h1>
+        <p class="lead">Para mujeres que atraviesan esta etapa sintiéndose más preocupadas, desbordadas o solas de lo que esperaban.</p>
+        <p class="lead" style="margin-top:15px">Te acompaño a comprender lo que te está pasando, reducir la culpa y recuperar una forma más amable de vivir esta etapa.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/contacto/">Reservar una primera llamada gratuita</a>
+        </div>
+        <div class="micro"><span class="micro-dot"></span> Online · Presencial en Argüelles, Madrid</div>
+      </div>
+
+      <aside class="hero-card" aria-label="Embarazo y mensaje destacado">
+        <img src="https://psicologiaconm.rildev04.eu/wp-content/uploads/Terapia-perinatal-1024x683.webp" alt="Mujer embarazada junto a una ventana">
+        <span class="photo-shade" aria-hidden="true"></span>
+        <div class="hero-quote">“Necesitar apoyo no significa que estés fallando como madre. No tienes por qué poder con todo tú sola.”</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="recognition-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Quizá te esté pasando</span>
+        <h2>¿Te reconoces en alguna de estas situaciones?</h2>
+        <p>No necesitas identificarte con todo ni esperar a encontrarte al límite para pedir apoyo.</p>
+      </div>
+
+      <div class="ident-grid">
+        <div class="ident-card">Te preocupas constantemente por si el bebé está bien o por si estás haciendo algo mal.</div>
+        <div class="ident-card">No consigues desconectar, incluso cuando tienes la oportunidad de descansar.</div>
+        <div class="ident-card">Te sientes culpable por no disfrutar esta etapa como imaginabas.</div>
+        <div class="ident-card">Estás más irritable, triste o sensible y no entiendes por qué.</div>
+        <div class="ident-card">Te cuesta reconocer quién eres desde que te convertiste en madre.</div>
+        <div class="ident-card">Tienes pensamientos que te asustan o te hacen dudar de ti misma.</div>
+      </div>
+
+      <div class="reassure">
+        <strong>Lo que sientes tiene sentido. No tienes que poder con todo.</strong><br>
+        La etapa perinatal implica muchos cambios en muy poco tiempo. Necesitar apoyo significa que estás atravesando una transformación importante y que no tienes por qué hacerlo sola.
+      </div>
+    </div>
+  </section>
+
+  <section class="cycle-section">
+    <div class="container">
+      <div class="cycle-intro">
+        <span class="eyebrow">La distancia entre expectativa y realidad</span>
+        <h2>No siempre te sientes como creías que deberías sentirte</h2>
+        <p>A menudo se espera que una mujer pueda adaptarse de manera natural y sentirse agradecida o feliz. Cuando la experiencia real es más difícil, esa expectativa puede aumentar la culpa y la sensación de estar fallando.</p>
+      </div>
+
+      <div class="expectation-reality">
+        <article class="experience expectation">
+          <span class="experience-label">La maternidad imaginada</span>
+          <h3>“Creía que sería diferente”</h3>
+          <ul>
+            <li>Sentirme feliz y agradecida</li>
+            <li>Conectar de inmediato con mi bebé</li>
+            <li>Saber de forma natural qué hacer</li>
+            <li>Disfrutar de cada momento</li>
+          </ul>
+        </article>
+        <article class="experience reality">
+          <span class="experience-label">La experiencia real</span>
+          <h3>“No me reconozco en lo que siento”</h3>
+          <ul>
+            <li>Cansancio que parece no terminar</li>
+            <li>Miedo, dudas o pensamientos difíciles</li>
+            <li>Irritabilidad, tristeza o desconexión</li>
+            <li>La sensación de estar fallando</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="new-pair">
+        <div class="new-pair-copy">
+          <span class="eyebrow" style="color:#fff4f1">Una maternidad real</span>
+          <h2>No tienes que convertirte en la madre que imaginabas</h2>
+          <p>Puedes construir una manera propia de vivir esta etapa: más amable, más realista y más conectada con lo que tú y tu familia necesitáis ahora.</p>
+        </div>
+        <div class="new-pair-art">
+          <img src="https://psicologiaconm.rildev04.eu/wp-content/uploads/Desbordada.webp" alt="Mujer buscando calma y bienestar durante la maternidad">
+          <span class="art-shade" aria-hidden="true"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Un acompañamiento para cada momento</span>
+        <h2>¿En qué puede ayudarte la terapia perinatal?</h2>
+        <p>El acompañamiento se adapta al momento que atraviesas, a tus necesidades y a la forma particular en la que estás viviendo esta etapa.</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item"><div class="work-icon">01</div><p>Ansiedad, preocupación constante o miedo a que algo salga mal durante el embarazo.</p></div>
+        <div class="work-item"><div class="work-icon">02</div><p>Miedo al parto, experiencias difíciles o recuerdos traumáticos.</p></div>
+        <div class="work-item"><div class="work-icon">03</div><p>Tristeza, irritabilidad, sensación de vacío o desbordamiento en el postparto.</p></div>
+        <div class="work-item"><div class="work-icon">04</div><p>Culpa, autoexigencia y dificultad para reconocerte en tu nueva identidad.</p></div>
+        <div class="work-item"><div class="work-icon">05</div><p>Pensamientos intrusivos o miedo constante a que le ocurra algo al bebé.</p></div>
+        <div class="work-item"><div class="work-icon">06</div><p>Dificultades para vincularte, soledad, falta de apoyo o sobrecarga.</p></div>
+        <div class="work-item"><div class="work-icon">07</div><p>Pérdida gestacional o perinatal, fertilidad y embarazos de especial vulnerabilidad.</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="early">
+    <div class="container early-grid">
+      <div>
+        <span class="eyebrow">Pedir apoyo también es cuidarte</span>
+        <h2>No es necesario esperar a encontrarte al límite</h2>
+        <p>Es frecuente experimentar cansancio, preocupación o cambios emocionales durante esta etapa. Puede ser conveniente consultar cuando el malestar se mantiene o interfiere en tu descanso y en tu vida cotidiana.</p>
+        <p>Cuanto antes puedas comprender qué te está ocurriendo, más fácil será evitar que la culpa, la ansiedad o el desbordamiento se consoliden.</p>
+      </div>
+
+      <aside class="early-panel">
+        <h3>No necesitas demostrar que puedes con todo.</h3>
+        <p>Pedir ayuda no tiene por qué ser el último recurso. Puede ser una forma de cuidarte mientras atraviesas una de las transformaciones más importantes de tu vida.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container faq-grid">
+      <div class="faq-heading">
+        <span class="eyebrow">Antes de empezar</span>
+        <h2>Preguntas frecuentes</h2>
+        <p>Es normal que antes de dar el paso aparezcan dudas. Aquí tienes algunas de las más habituales.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>¿Trabajas solo con temas de maternidad o crianza?</summary>
+          <p>Mi especialidad es acompañar procesos emocionales relacionados con el embarazo, el postparto, la maternidad, la identidad y la carga mental. Podemos valorar tu situación concreta en la primera llamada.</p>
+        </details>
+        <details>
+          <summary>¿Tengo que estar embarazada o haber dado a luz recientemente?</summary>
+          <p>No. La psicología perinatal también acompaña la búsqueda de embarazo, los tratamientos de fertilidad, las pérdidas y la adaptación a la maternidad.</p>
+        </details>
+        <details>
+          <summary>¿Cómo sé si lo que siento requiere ayuda?</summary>
+          <p>Puede ser conveniente pedir apoyo cuando el malestar es intenso, se mantiene, interfiere en tu descanso o en tu vida cotidiana, o sientes que no consigues manejarlo sola.</p>
+        </details>
+        <details>
+          <summary>¿Puedo hacer terapia si tengo que estar con mi bebé?</summary>
+          <p>Sí. Buscaremos una forma realista de organizar las sesiones y el bebé podrá estar contigo cuando sea necesario.</p>
+        </details>
+        <details>
+          <summary>¿Las sesiones pueden ser online?</summary>
+          <p>Sí. La modalidad online facilita la conciliación durante el embarazo y el postparto. Solo necesitas cierta privacidad y una conexión estable.</p>
+        </details>
+        <details>
+          <summary>¿Atiendes también de forma presencial?</summary>
+          <p>Sí. Además de las sesiones online, atiendo en Clínica Método TAD, Calle del Tutor 57, en Argüelles, Madrid.</p>
+        </details>
+        <details>
+          <summary>¿Cuál es el precio y duración de las sesiones?</summary>
+          <p>Las sesiones duran aproximadamente 50–55 minutos. La terapia individual tiene un precio de 60 € por sesión.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="call-section">
+    <div class="container">
+      <div class="call-card">
+        <div>
+          <span class="eyebrow" style="color:#fff4f1">Primer paso</span>
+          <h2>Podemos hablar de cómo te estás sintiendo</h2>
+          <p>La primera llamada es gratuita y dura aproximadamente 20 minutos. Podrás contarme brevemente qué estás viviendo, preguntarme cualquier duda y valorar si mi forma de trabajar encaja con lo que necesitas.</p>
+          <p>No es una sesión de terapia ni implica ningún compromiso.</p>
+        </div>
+
+        <aside class="call-side">
+          <div class="call-detail">
+            <div>◷</div>
+            <div><strong>20 minutos</strong><span>Primera llamada gratuita</span></div>
+          </div>
+          <div class="call-detail">
+            <div>⌂</div>
+            <div><strong>Online o presencial</strong><span>Argüelles, Madrid</span></div>
+          </div>
+          <div class="call-detail">
+            <div>♡</div>
+            <div><strong>Sin compromiso</strong><span>Para conocernos y resolver tus dudas</span></div>
+          </div>
+          <a class="btn" href="/contacto/">Reservar una llamada gratuita</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>© 2026 Psicología con M · Miriam Maestro López · Nº Colegiada M-34521</div>
+    <div class="footer-links">
+      <a href="#">Aviso legal</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuButton = document.querySelector('.menu-btn');
+  const navigation = document.querySelector('.navlinks');
+
+  menuButton.addEventListener('click', () => {
+    const isOpen = navigation.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  });
+
+  document.querySelectorAll('.navlinks a').forEach(a => {
+    a.addEventListener('click', () => {
+      navigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+</script>
+</body>
+</html>

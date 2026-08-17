@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terapia de pareja en Madrid y online | Psicología con M</title>
+  <meta name="description" content="Terapia de pareja para padres y madres que sienten distancia, discusiones o desconexión tras la llegada de los hijos. Online y presencial en Argüelles, Madrid.">
+  <style>
+    :root{
+      --bg:#fffdfb;
+      --paper:#fffdfb;
+      --sage:#c99288;
+      --sage-dark:#c99288;
+      --sage-soft:#f4e8e5;
+      --sand:#fcf6f4;
+      --rose:#e9d7d1;
+      --text:#7a716a;
+      --heading:#7f6a5a;
+      --muted:#8a7f77;
+      --line:#eadfda;
+      --white:#fffdfb;
+      --radius:24px;
+      --shadow:0 20px 60px rgba(58,51,43,.08);
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.7;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    :focus-visible{outline:3px solid rgba(67,86,74,.42);outline-offset:4px}
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--sage-dark);
+      font-size:.78rem;
+      font-weight:750;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:26px;height:1px;background:var(--sage);
+    }
+
+    h1,h2,h3{
+      margin:0;
+      color:var(--heading);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight:500;
+      letter-spacing:-.025em;
+      line-height:1.12;
+    }
+    h1{font-size:clamp(2.7rem,6vw,5rem)}
+    h2{font-size:clamp(2rem,4vw,3.35rem)}
+    h3{font-size:1.45rem}
+    p{margin:0}
+    .lead{font-size:clamp(1.08rem,1.5vw,1.25rem);color:var(--text)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 24px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.96rem;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+    .btn-primary{background:var(--sage-dark);color:white}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(67,86,74,.18)}
+    .btn-secondary{border-color:var(--sage-dark);color:var(--sage-dark);background:transparent}
+    .btn-secondary:hover{background:var(--sage-soft)}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,253,251,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(228,221,212,.8);
+    }
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      display:block;
+      width:205px;
+    }
+    .brand img{width:100%;height:auto}
+    .navlinks{display:flex;align-items:center;gap:28px;font-size:.94rem}
+    .navlinks a{color:var(--text)}
+    .navlinks a:hover{color:var(--sage-dark)}
+    .nav-cta{padding:11px 17px;background:var(--sage-dark);color:white!important;border-radius:999px}
+    .menu-btn{display:none;border:0;background:none;font-size:1.5rem;color:var(--sage-dark)}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:96px 0 88px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:520px;height:520px;border-radius:50%;
+      background:var(--sage-soft);
+      right:-180px;top:-180px;
+      opacity:.72;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:70px;
+      align-items:center;
+    }
+    .hero-copy{max-width:720px}
+    .hero h1{margin:18px 0 26px}
+    .hero h1 span{color:#a66f65}
+    .hero-copy .lead{max-width:650px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+    .micro{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:20px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .micro-dot{width:7px;height:7px;border-radius:50%;background:var(--sage)}
+
+    .hero-card{
+      position:relative;
+      min-height:460px;
+      background:var(--sage-soft);
+      border-radius:38px 38px 120px 38px;
+      box-shadow:var(--shadow);
+      padding:44px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      overflow:hidden;
+    }
+    .hero-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .hero-card::marker{display:none}
+    .hero-card .photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(38,48,42,.58))}
+    .hero-card::before,.hero-card::after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(67,86,74,.22);
+      border-radius:50%;
+    }
+    .hero-card::before{width:250px;height:250px;right:-60px;top:-60px}
+    .hero-card::after{width:160px;height:160px;right:22px;top:30px}
+    .hero-quote{
+      position:relative;
+      background:rgba(255,255,255,.72);
+      backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:22px;
+      padding:26px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.3rem;
+      line-height:1.45;
+      color:var(--heading);
+    }
+
+    section{padding:92px 0}
+    .section-head{max-width:760px;margin-bottom:48px}
+    .section-head h2{margin:14px 0 18px}
+    .section-head p{color:var(--muted);font-size:1.05rem}
+
+    .recognition-section{position:relative;overflow:hidden;padding-top:78px;background:#fcf6f4;border-top:1px solid var(--line)}
+    .recognition-section:after{content:"";position:absolute;z-index:0;right:-120px;top:-180px;width:370px;height:370px;border-radius:50%;background:rgba(233,215,209,.38)}
+    .recognition-section .container{position:relative;z-index:1}
+    .recognition-section .section-head{max-width:780px}
+
+    .ident-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .ident-card{
+      background:rgba(255,253,251,.92);
+      border:1px solid rgba(201,146,136,.24);
+      border-radius:20px;
+      padding:25px 25px 25px 58px;
+      position:relative;
+      font-size:1rem;
+      box-shadow:0 10px 28px rgba(92,70,58,.045);
+    }
+    .ident-card::before{
+      content:"✓";
+      position:absolute;
+      left:24px;top:24px;
+      width:22px;height:22px;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--sage-soft);
+      color:var(--sage-dark);
+      font-weight:800;
+      font-size:.78rem;
+    }
+    .reassure{
+      margin-top:34px;
+      background:var(--sage-dark);
+      color:white;
+      border-radius:24px;
+      padding:32px 36px;
+      font-size:1.08rem;
+    }
+    .reassure strong{font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;font-weight:500}
+
+    .cycle-section{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .cycle-intro{max-width:820px;margin-bottom:42px}
+    .cycle-intro h2{margin:14px 0 20px}
+    .cycle-intro p{font-size:1.06rem;color:var(--text)}
+
+    .cycle{
+      display:grid;
+      grid-template-columns:1fr 64px 1fr 64px;
+      gap:14px;
+      align-items:center;
+      margin:42px 0 32px;
+    }
+    .cycle-card{
+      min-height:220px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:30px;
+      box-shadow:0 12px 32px rgba(58,51,43,.05);
+    }
+    .cycle-card .num{
+      width:36px;height:36px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--sage-soft);
+      color:var(--sage-dark);
+      font-weight:800;
+      margin-bottom:20px;
+    }
+    .cycle-card h3{margin-bottom:10px}
+    .cycle-card p{color:var(--muted)}
+    .arrow{
+      font-size:2rem;
+      text-align:center;
+      color:var(--sage);
+    }
+    .cycle-note{
+      background:var(--paper);
+      border-left:4px solid var(--sage);
+      border-radius:0 18px 18px 0;
+      padding:24px 28px;
+      font-weight:650;
+    }
+
+    .work-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:42px;
+    }
+    .therapeutic-section{background:var(--sage-soft)}
+    .therapeutic-section .section-head{max-width:800px}
+    .work-item{
+      display:flex;
+      gap:17px;
+      padding:24px;
+      border:1px solid rgba(201,146,136,.2);
+      border-radius:18px;
+      background:rgba(255,253,251,.72);
+    }
+    .work-icon{
+      flex:none;
+      width:38px;height:38px;
+      border-radius:12px;
+      background:var(--sage-soft);
+      display:grid;place-items:center;
+      color:var(--sage-dark);
+      font-weight:800;
+    }
+    .work-item p{color:var(--text)}
+
+    .new-pair{
+      margin-top:55px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-radius:30px;
+      overflow:hidden;
+      background:var(--sage-dark);
+      color:white;
+    }
+    .new-pair-copy{padding:50px}
+    .new-pair h2{font-size:clamp(2rem,3.5vw,3rem);margin-bottom:18px}
+    .new-pair p{color:rgba(255,255,255,.82);font-size:1.04rem}
+    .new-pair-art{
+      min-height:340px;
+      background:linear-gradient(135deg,var(--rose),var(--sage-soft));
+      position:relative;
+    }
+    .new-pair-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .new-pair-art .art-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(67,86,74,.22),transparent)}
+    .new-pair-art::before,
+    .new-pair-art::after{
+      content:"";
+      position:absolute;
+      width:170px;height:260px;
+      border-radius:110px 110px 30px 30px;
+      background:rgba(255,255,255,.34);
+      bottom:-40px;
+    }
+    .new-pair-art::before{left:22%;transform:rotate(-8deg)}
+    .new-pair-art::after{right:20%;transform:rotate(8deg)}
+
+    .early{
+      background:var(--paper);
+    }
+    .early-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+    .early h2{margin:14px 0 22px}
+    .early p{font-size:1.07rem;color:var(--text)}
+    .early p+p{margin-top:18px}
+    .early-panel{
+      padding:38px;
+      border-radius:28px;
+      background:var(--sage-soft);
+    }
+    .early-panel h3{font-size:1.7rem;color:var(--sage-dark);margin-bottom:14px}
+    .early-panel p{color:var(--text)}
+
+    .faq-section{background:var(--sand);border-top:1px solid var(--line)}
+    .faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:start}
+    .faq-heading{position:sticky;top:115px}
+    .faq-heading h2{margin:14px 0 18px}
+    .faq-heading p{color:var(--muted)}
+    .faq-list{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--paper)}
+    .faq-list details{border-bottom:1px solid var(--line)}
+    .faq-list details:last-child{border-bottom:0}
+    .faq-list summary{position:relative;padding:21px 54px 21px 24px;cursor:pointer;list-style:none;font-weight:650;color:var(--heading)}
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary::after{content:"+";position:absolute;right:24px;color:var(--sage-dark);font-size:1.25rem}
+    .faq-list details[open] summary::after{content:"−"}
+    .faq-list details p{padding:0 54px 22px 24px;color:var(--muted)}
+
+    .call-section{padding:100px 0}
+    .call-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:34px;
+      background:var(--sage-dark);
+      color:white;
+      padding:64px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:48px;
+      align-items:center;
+    }
+    .call-card::after{
+      content:"";
+      position:absolute;
+      width:340px;height:340px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.15);
+      right:-130px;top:-100px;
+    }
+    .call-card h2{margin:14px 0 22px}
+    .call-card p{color:rgba(255,255,255,.82);max-width:720px}
+    .call-card p+p{margin-top:16px}
+    .call-side{
+      position:relative;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:24px;
+      padding:28px;
+    }
+    .call-detail{
+      display:flex;
+      gap:12px;
+      padding:12px 0;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .call-detail:last-of-type{border-bottom:0;margin-bottom:18px}
+    .call-detail strong{display:block}
+    .call-detail span{font-size:.9rem;color:rgba(255,255,255,.72)}
+    .call-side .btn{width:100%;background:white;color:var(--sage-dark)}
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:38px 0;
+      color:var(--muted);
+      font-size:.88rem;
+    }
+    .footer-grid{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+
+    @media(max-width:900px){
+      .navlinks{display:none}
+      .navlinks.open{
+        display:flex;
+        position:absolute;
+        left:20px;right:20px;top:68px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:14px;
+        border:1px solid var(--line);
+        border-radius:18px;
+        background:var(--paper);
+        box-shadow:var(--shadow);
+      }
+      .navlinks.open a{padding:12px}
+      .menu-btn{display:block}
+      .hero-grid,.early-grid,.call-card,.new-pair,.faq-grid{grid-template-columns:1fr}
+      .hero{padding-top:66px}
+      .hero-card{min-height:320px}
+      .faq-heading{position:static}
+      .cycle{grid-template-columns:1fr}
+      .arrow{transform:rotate(90deg)}
+      .work-grid{grid-template-columns:1fr}
+      .new-pair-art{min-height:250px}
+      .call-card{padding:42px 30px}
+    }
+    @media(max-width:640px){
+      .container{width:min(var(--max),calc(100% - 28px))}
+      section{padding:70px 0}
+      .ident-grid{grid-template-columns:1fr}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .hero-card{padding:28px;border-radius:28px 28px 80px 28px}
+      .hero-quote{font-size:1.12rem}
+      .new-pair-copy{padding:38px 28px}
+      .call-section{padding:70px 0}
+      .footer-grid{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="PsicologíaConM, inicio"><img src="https://psicologiaconm.rildev04.eu/wp-content/uploads/Logo-Floreria-Minimalista-Blanco-Negro.png" alt="PsicologíaConM"></a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">☰</button>
+    <nav class="navlinks" id="main-menu" aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/terapia-de-pareja/" aria-current="page"><strong>Terapia de pareja</strong></a>
+      <a href="/terapia-perinatal/">Terapia perinatal</a>
+      <a class="nav-cta" href="/contacto/">Primera llamada</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Terapia de pareja</span>
+        <h1>Para parejas que, tras convertirse en padres, <span>se sienten alejadas y apenas se reconocen.</span></h1>
+        <p class="lead">El cansancio, las discusiones y las diferencias en la crianza han ido ocupando cada vez más espacio entre vosotros.</p>
+        <p class="lead" style="margin-top:15px">Os acompaño a comprender qué está ocurriendo en vuestra relación, comunicaros sin haceros daño y volver a sentiros un equipo.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/contacto/">Reservar una primera llamada gratuita</a>
+        </div>
+        <div class="micro"><span class="micro-dot"></span> Online · Presencial en Argüelles, Madrid</div>
+      </div>
+
+      <aside class="hero-card" aria-label="Pareja conversando y mensaje destacado">
+        <img src="https://psicologiaconm.rildev04.eu/wp-content/uploads/Terapia-de-pareja-1024x683.webp" alt="Pareja compartiendo un momento de conversación">
+        <span class="photo-shade" aria-hidden="true"></span>
+        <div class="hero-quote">“No se trata de volver a ser la pareja de antes, sino de encontrar una nueva forma de estar juntos en la familia que sois ahora.”</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="recognition-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">¿Os pasa algo de esto?</span>
+        <h2>¿Os sentís identificados?</h2>
+        <p>A veces no hay una gran crisis concreta. Hay pequeñas situaciones que se repiten hasta que la relación empieza a sentirse más pesada, más distante o más difícil.</p>
+      </div>
+
+      <div class="ident-grid">
+        <div class="ident-card">Las conversaciones sobre tareas, horarios o crianza terminan convirtiéndose en discusiones.</div>
+        <div class="ident-card">Sentís que la carga mental y las responsabilidades no están equilibradas.</div>
+        <div class="ident-card">Uno siente que reclama constantemente y el otro que, haga lo que haga, nunca es suficiente.</div>
+        <div class="ident-card">Tenéis formas distintas de entender los límites, el sueño o la crianza.</div>
+        <div class="ident-card">Os organizáis para que todo funcione, pero apenas encontráis espacio para estar como pareja.</div>
+        <div class="ident-card">Seguís queriéndoos, pero cada vez os sentís más lejos.</div>
+      </div>
+
+      <div class="reassure">
+        <strong>Si os sentís así, no significa que vuestra relación esté rota.</strong><br>
+        Muchas parejas entran en una crisis al convertirse en padres porque cambian el tiempo disponible, las prioridades, el reparto de responsabilidades y la forma de necesitarse mutuamente.
+      </div>
+    </div>
+  </section>
+
+  <section class="cycle-section">
+    <div class="container">
+      <div class="cycle-intro">
+        <span class="eyebrow">Lo que suele haber debajo</span>
+        <h2>El problema no es solo aquello por lo que discutís</h2>
+        <p>Muchas parejas creen que discuten por el reparto de tareas, el dinero, las familias, el sueño del bebé o las diferencias en la crianza. Sin embargo, con frecuencia lo que mantiene el conflicto es <strong>la manera en la que reaccionáis cuando alguno se siente solo, poco valorado o sobrepasado.</strong></p>
+      </div>
+
+      <div class="cycle">
+        <article class="cycle-card">
+          <div class="num">1</div>
+          <h3>Uno protesta o reclama</h3>
+          <p>Insiste, se enfada o eleva la intensidad porque se siente solo, poco acompañado o poco tenido en cuenta.</p>
+        </article>
+        <div class="arrow">→</div>
+        <article class="cycle-card">
+          <div class="num">2</div>
+          <h3>El otro se protege alejándose</h3>
+          <p>Se defiende, se distancia o deja de hablar porque se siente criticado, insuficiente o incapaz de hacerlo bien.</p>
+        </article>
+        <div class="arrow">↻</div>
+      </div>
+
+      <div class="cycle-note">Cuanto más insiste uno, más se aleja el otro. Cuanto más se aleja el otro, con más intensidad protesta el primero. Así se crea un círculo en el que ambos tratáis de protegeros, pero ninguno termina sintiéndose comprendido.</div>
+
+      <div class="reassure" style="margin-top:28px">
+        <strong>En terapia no buscamos culpables.</strong><br>
+        Trabajamos para identificar el ciclo que os está haciendo daño y aprender a responder de otra manera.
+      </div>
+    </div>
+  </section>
+
+  <section class="therapeutic-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">El trabajo terapéutico</span>
+        <h2>¿Qué podemos trabajar en terapia?</h2>
+        <p>El objetivo no es que nunca volváis a discutir, sino que podáis entender qué sucede entre vosotros y afrontar los conflictos sin deteriorar la relación.</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item"><div class="work-icon">01</div><p>Identificar el patrón que se repite en vuestras discusiones.</p></div>
+        <div class="work-item"><div class="work-icon">02</div><p>Comprender qué emociones y necesidades hay debajo del enfado, el silencio o la distancia.</p></div>
+        <div class="work-item"><div class="work-icon">03</div><p>Expresar lo que necesitáis sin atacar, culpabilizar o poneros a la defensiva.</p></div>
+        <div class="work-item"><div class="work-icon">04</div><p>Escuchar al otro sin interpretar automáticamente sus palabras como una crítica.</p></div>
+        <div class="work-item"><div class="work-icon">05</div><p>Abordar el reparto de tareas, la carga mental y las diferencias sobre la crianza.</p></div>
+        <div class="work-item"><div class="work-icon">06</div><p>Recuperar la cercanía, el afecto y la intimidad.</p></div>
+        <div class="work-item"><div class="work-icon">07</div><p>Construir una nueva forma de funcionar como pareja y como padres.</p></div>
+      </div>
+
+      <div class="new-pair">
+        <div class="new-pair-copy">
+          <span class="eyebrow" style="color:#fff4f1">Una relación diferente</span>
+          <h2>No se trata de volver a ser la pareja de antes</h2>
+          <p>La llegada de un hijo transforma la relación. La terapia puede ayudaros a construir una forma nueva de estar juntos, más adaptada a la familia que sois ahora.</p>
+        </div>
+        <div class="new-pair-art">
+          <img src="https://psicologiaconm.rildev04.eu/wp-content/uploads/Realacion-cambiada.webp" alt="Reconstruir la relación de pareja después de convertirse en padres">
+          <span class="art-shade" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="early">
+    <div class="container early-grid">
+      <div>
+        <span class="eyebrow">Prevención también es terapia</span>
+        <h2>No es necesario esperar a estar al borde de la ruptura</h2>
+        <p>La terapia de pareja también puede ser útil cuando todavía hay afecto y compromiso, pero observáis que las discusiones se repiten, que la distancia está aumentando o que no sabéis cómo adaptaros a esta etapa.</p>
+        <p>Cuanto antes podáis comprender el patrón, más fácil será evitar que el resentimiento y la desconexión se consoliden.</p>
+      </div>
+
+      <aside class="early-panel">
+        <h3>También podéis venir antes de que todo esté mal.</h3>
+        <p>Pedir ayuda no tiene por qué ser el último recurso. Puede ser una forma de cuidar la relación mientras todavía hay mucho que proteger y construir juntos.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container faq-grid">
+      <div class="faq-heading">
+        <span class="eyebrow">Antes de empezar</span>
+        <h2>Preguntas frecuentes</h2>
+        <p>Es normal que antes de dar el paso aparezcan dudas. Aquí tienes algunas de las más habituales.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>¿Trabajas únicamente con parejas que tienen hijos?</summary>
+          <p>No. Aunque estoy especializada en dificultades relacionadas con el embarazo, el postparto y la crianza, también acompaño a parejas en otros momentos de cambio, conflicto o desconexión.</p>
+        </details>
+        <details>
+          <summary>¿Y si mi pareja no quiere venir a terapia?</summary>
+          <p>Para hacer terapia de pareja es necesario que ambos aceptéis participar. Si tu pareja aún no está preparada, podemos valorar un proceso individual para comprender la situación y aclarar qué necesitas.</p>
+        </details>
+        <details>
+          <summary>¿Podemos hacer las sesiones online?</summary>
+          <p>Sí. La terapia puede realizarse online siempre que ambos dispongáis de cierta privacidad y una conexión estable.</p>
+        </details>
+        <details>
+          <summary>¿Tenemos que acudir siempre los dos?</summary>
+          <p>Las sesiones se realizan habitualmente con ambos miembros. En algún momento del proceso podría proponerse una entrevista individual dentro del encuadre acordado.</p>
+        </details>
+        <details>
+          <summary>¿Cuántas sesiones necesitaremos?</summary>
+          <p>No existe una duración idéntica para todas las parejas. Dependerá del motivo de consulta, del tiempo que lleve el conflicto y de los objetivos acordados.</p>
+        </details>
+        <details>
+          <summary>¿Atiendes también de forma presencial?</summary>
+          <p>Sí. Además de las sesiones online, atiendo en Clínica Método TAD, Calle del Tutor 57, en Argüelles, Madrid.</p>
+        </details>
+        <details>
+          <summary>¿Cuál es el precio y duración de las sesiones?</summary>
+          <p>Las sesiones duran aproximadamente 50–55 minutos. La terapia de pareja tiene un precio de 70 € por sesión.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="call-section">
+    <div class="container">
+      <div class="call-card">
+        <div>
+          <span class="eyebrow" style="color:#fff4f1">Primer paso</span>
+          <h2>Podemos hablar de lo que os está pasando</h2>
+          <p>La primera llamada es gratuita y dura aproximadamente 20 minutos. Podréis contarme brevemente vuestra situación, preguntarme cualquier duda y valorar si mi forma de trabajar encaja con lo que necesitáis.</p>
+          <p>No es una sesión de terapia ni implica ningún compromiso.</p>
+        </div>
+
+        <aside class="call-side">
+          <div class="call-detail">
+            <div>◷</div>
+            <div><strong>20 minutos</strong><span>Primera llamada gratuita</span></div>
+          </div>
+          <div class="call-detail">
+            <div>⌂</div>
+            <div><strong>Online o presencial</strong><span>Argüelles, Madrid</span></div>
+          </div>
+          <div class="call-detail">
+            <div>♡</div>
+            <div><strong>Sin compromiso</strong><span>Para conocernos y resolver dudas</span></div>
+          </div>
+          <a class="btn" href="/contacto/">Reservar una llamada gratuita</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>© 2026 Psicología con M · Miriam Maestro López · Nº Colegiada M-34521</div>
+    <div class="footer-links">
+      <a href="#">Aviso legal</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuButton = document.querySelector('.menu-btn');
+  const navigation = document.querySelector('.navlinks');
+
+  menuButton.addEventListener('click', () => {
+    const isOpen = navigation.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  });
+
+  document.querySelectorAll('.navlinks a').forEach(a => {
+    a.addEventListener('click', () => {
+      navigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+</script>
+</body>
+</html>
